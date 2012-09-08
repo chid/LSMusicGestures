@@ -32,6 +32,8 @@
 }
 - (void)previous
 {
-	[[objc_getClass("SBMediaController") sharedInstance] changeTrack:-1];
+  # made change to go back 30 seconds
+	[[objc_getClass("SBMediaController") sharedInstance] beginSeek:0];
+	[[objc_getClass("SBMediaController") sharedInstance] endSeek:-30];
 }
 %end
